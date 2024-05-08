@@ -9,6 +9,7 @@ class RomanNumerals
       4 => "IV",
       5 => "V",
       9 => "IX",
+      10 => "X",
       21 => "XXI",
       50 => "L",
       100 => "C",
