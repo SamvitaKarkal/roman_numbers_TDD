@@ -9,5 +9,15 @@ RSpec.describe RomanNumerals do
       roman_number = roman_numerals.string_convert(1)
       expect(roman_number).to eq("I")
     end
+
+    it "checks if 2 is converted into roman number" do
+      roman_number = roman_numerals.string_convert(1)
+      expect(roman_number).to eq("II")
+    end
+
+    it "checks if 3 is converted into roman number" do
+      roman_number = roman_numerals.string_convert(1)
+      expect(roman_number).to eq("III")
+    end
   end
 end
