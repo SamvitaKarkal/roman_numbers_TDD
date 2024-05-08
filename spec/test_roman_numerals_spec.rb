@@ -5,6 +5,7 @@ RSpec.describe RomanNumerals do
   describe "RomanNumerals" do
     let(:roman_numerals) { RomanNumerals.new }
 
+    # Test cases for items in Hash
     it "checks if 1 is converted into roman number" do
       roman_number = roman_numerals.string_convert(1)
       expect(roman_number).to eq("I")
@@ -68,6 +69,22 @@ RSpec.describe RomanNumerals do
     it "checks if 1000 is converted into roman number" do
       roman_number = roman_numerals.string_convert(1000)
       expect(roman_number).to eq("M")
+    end
+
+    # Test cases for items not in hash
+    it "checks if 6 is converted into roman number" do
+      roman_number = roman_numerals.string_convert(6)
+      expect(roman_number).to eq("VI")
+    end
+
+    it "checks if 8 is converted into roman number" do
+      roman_number = roman_numerals.string_convert(8)
+      expect(roman_number).to eq("VIII")
+    end
+
+    it "checks if 11 is converted into roman number" do
+      roman_number = roman_numerals.string_convert(11)
+      expect(roman_number).to eq("XI")
     end
   end
 end
