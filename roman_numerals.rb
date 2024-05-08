@@ -19,8 +19,9 @@ class RomanNumerals
   end
 
   def string_convert(input)
-    if @decimal_to_roman.include?(input)
-      return @decimal_to_roman[input]
-    end
+    return '' if input <= 0
+
+    key = @decimal_to_roman.keys.select { |k| k <= input }.max
+    @decimal_to_roman[key] + string_convert(input - key)
   end
 end
